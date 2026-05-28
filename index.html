@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>프론트엔드 개발자 이력서</title>
+  <style>
+    /* 1. CSS 변수 설정 (다크 모드 지원) */
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #37352f;
+      --sub-text-color: #787774;
+      --divider-color: #e9e9e7;
+      --badge-bg: #f1f1ef;
+      --link-color: #000000;
+    }
+
+    body.dark {
+      --bg-color: #191919;
+      --text-color: #d4d4d4;
+      --sub-text-color: #9b9b9b;
+      --divider-color: #3f3f46;
+      --badge-bg: #2d2d2d;
+      --link-color: #ffffff;
+    }
+
+    /* 2. 전체 초기화 및 폰트 설정 */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 50px 20px;
+    }
+
+    /* 3. 타이포그래피 */
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 40px;
+      margin-bottom: 15px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid var(--divider-color);
+    }
+
+    p, li {
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+      border-bottom: 1px solid var(--divider-color);
+    }
+
+    a:hover {
+      border-bottom: 1px solid var(--link-color);
+    }
+
+    /* 4. 리스트 및 뱃지 스타일 */
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-bottom: 15px;
+    }
+
+    .badge-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 15px;
+    }
+
+    .badge {
+      background-color: var(--badge-bg);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+    }
+
+    /* 5. 2단 분리 레이아웃 (프로젝트 및 자격증 항목에 공통 사용) */
+    .list-item {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 30px;
+    }
+
+    .item-header {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .item-date {
+      color: var(--sub-text-color);
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+
+    .item-details {
+      flex: 1;
+    }
+
+    .item-issuer {
+      color: var(--sub-text-color);
+      font-size: 0.9rem;
+      margin-top: -5px; /* 자격증 발급기관 텍스트를 위쪽으로 살짝 붙임 */
+    }
+
+    /* 다크 모드 버튼 */
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 8px 16px;
+      background-color: var(--text-color);
+      color: var(--bg-color);
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    /* 미디어 쿼리: 화면이 넓어지면 좌/우 2단으로 변경 */
+    @media (min-width: 600px) {
+      .list-item {
+        flex-direction: row;
+      }
+      .item-left-group {
+        width: 30%;
+        padding-right: 20px;
+      }
+      .item-details {
+        width: 70%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="theme-toggle" id="theme-toggle-btn">다크 모드</button>
+
+  <div class="container">
+    <header>
+      <h1>백다혜</h1>
+      <p>사용자 경험을 고민하고, 문제 해결을 즐기는 예비 프론트엔드 개발자입니다.</p>
+      <p>
+        📧 Email: <a href="mailto:email@example.com">koala060922@gmail.com</a><br>
+        🐱 Github: <a href="#" target="_blank">github.com/username</a>
+      </p>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>새로운 도전을 즐기며, 논리적인 접근으로 문제를 해결하는 것을 좋아합니다.</p>
+      <p>단순히 코드를 작성하는 것을 넘어 서비스의 목적과 타겟층을 분석하고 기획하는 과정에도 적극적으로 참여합니다.</p>
+    </section>
+
+    <section>
+      <h2>Stacks</h2>
+      <p><strong>Front-End</strong></p>
+      <div class="badge-container">
+        <span class="badge">HTML</span>
+        <span class="badge">CSS</span>
+        <span class="badge">JavaScript</span>
+      </div>
+      
+      <p><strong>Language & Tools</strong></p>
+      <div class="badge-container">
+        <span class="badge">Java (Basic)</span>
+        <span class="badge">C</span>
+        <span class="badge">Git</span>
+        <span class="badge">GitHub</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+
+      <!-- 프로젝트 1. 현재 만들고 있는 웹 이력서 -->
+      <div class="list-item">
+        <div class="item-left-group">
+          <div class="item-header">반응형 웹 포트폴리오 개발</div>
+          <div class="item-date">2026.05 ~ 진행 중</div>
+        </div>
+        <div class="item-details">
+          <p>순수 바닐라 웹 기술(HTML, CSS, JS)을 활용하여 직접 기획하고 구현한 정적 웹 이력서</p>
+          <ul>
+            <li><strong>시맨틱 마크업:</strong> 의미에 맞는 HTML 태그를 사용하여 웹 접근성 및 문서 구조화 향상</li>
+            <li><strong>반응형 UI 및 테마:</strong> CSS Flexbox와 Media Query를 활용한 반응형 레이아웃 적용 및 JavaScript DOM 조작을 통한 다크 모드 기능 구현</li>
+            <li><strong>버전 관리 및 배포:</strong> Git을 이용한 소스 코드 버전 관리 및 GitHub Pages를 활용한 웹 호스팅 적용</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 프로젝트 2. Java 학습 내용을 바탕으로 한 예시 프로젝트 -->
+      <!-- 학교 과제나 개인 스터디로 진행한 Java 객체지향 프로젝트로 내용을 바꿔보세요 -->
+      <div class="list-item">
+        <div class="item-left-group">
+          <div class="item-header">Java 기반 학생 관리 시스템 (예시)</div>
+          <div class="item-date">2026.04 ~ 2026.05</div>
+        </div>
+        <div class="item-details">
+          <p>Java의 핵심인 객체지향 프로그래밍(OOP) 개념을 적용한 콘솔 기반 데이터 관리 프로그램</p>
+          <ul>
+            <li><strong>객체지향 설계:</strong> 클래스와 객체, 상속, 다형성 개념을 활용하여 코드의 재사용성 및 유지보수성 향상</li>
+            <li><strong>로직 구현:</strong> 조건문, 반복문, 배열을 활용하여 학생 데이터의 조회, 추가, 삭제(CRUD) 기능 구현</li>
+            <li><strong>예외 처리:</strong> 잘못된 사용자 입력 시 프로그램이 종료되지 않도록 Exception Handling 로직을 추가하여 안정성 확보</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 프로젝트 3. 프론트엔드 역량을 보여주기 좋은 예시 프로젝트 -->
+      <div class="list-item">
+        <div class="item-left-group">
+          <div class="item-header">인터랙티브 웹 To-Do 리스트 (예시)</div>
+          <div class="item-date">2026.05</div>
+        </div>
+        <div class="item-details">
+          <p>JavaScript 동적 렌더링 및 브라우저 저장소를 활용한 할 일 관리 웹 애플리케이션</p>
+          <ul>
+            <li><strong>동적 DOM 제어:</strong> JavaScript 이벤트 리스너를 활용하여 사용자 입력에 따라 화면이 즉각적으로 업데이트되도록 구현</li>
+            <li><strong>상태 관리:</strong> 브라우저의 LocalStorage API를 활용하여 새로고침 후에도 사용자의 데이터가 유지되도록 상태 저장 기능 추가</li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+
+    <section>
+      <h2>Certificates</h2>
+      
+      <div class="list-item">
+        <div class="item-left-group">
+          <div class="item-date">2026.03</div> </div>
+        <div class="item-details">
+          <div class="item-header">정보처리기사 (필기 합격 / 실기 준비 중)</div> <p class="item-issuer">한국산업인력공단</p> </div>
+      </div>
+
+      <div class="list-item">
+        <div class="item-left-group">
+          <div class="item-date">2025.11</div>
+        </div>
+        <div class="item-details">
+          <div class="item-header">SQL 개발자 (SQLD)</div>
+          <p class="item-issuer">한국데이터산업진흥원</p>
+        </div>
+      </div>
+      
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="list-item">
+        <div class="item-left-group">
+          <div class="item-date">2025.03 ~ 재학 중</div>
+        </div>
+        <div class="item-details">
+          <div class="item-header">동국대학교 WISE 컴퓨터공학과</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle-btn');
+    
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      if (document.body.classList.contains('dark')) {
+        toggleBtn.textContent = '라이트 모드';
+      } else {
+        toggleBtn.textContent = '다크 모드';
+      }
+    });
+  </script>
+</body>
+</html>
