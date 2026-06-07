@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>프론트엔드 개발자 이력서</title>
   <style>
-    /* 1. CSS 변수 설정 (다크 모드 지원) */
     :root {
       --bg-color: #ffffff;
       --text-color: #37352f;
@@ -24,7 +23,6 @@
       --link-color: #ffffff;
     }
 
-    /* 2. 전체 초기화 및 폰트 설정 */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -45,7 +43,6 @@
       padding: 50px 20px;
     }
 
-    /* 3. 타이포그래피 */
     h1 {
       font-size: 2.5rem;
       margin-bottom: 10px;
@@ -74,7 +71,6 @@
       border-bottom: 1px solid var(--link-color);
     }
 
-    /* 4. 리스트 및 뱃지 스타일 */
     ul {
       list-style-type: disc;
       padding-left: 20px;
@@ -95,7 +91,6 @@
       font-size: 0.9rem;
     }
 
-    /* 5. 2단 분리 레이아웃 (프로젝트 및 자격증 항목에 공통 사용) */
     .list-item {
       display: flex;
       flex-direction: column;
@@ -120,10 +115,9 @@
     .item-issuer {
       color: var(--sub-text-color);
       font-size: 0.9rem;
-      margin-top: -5px; /* 자격증 발급기관 텍스트를 위쪽으로 살짝 붙임 */
+      margin-top: -5px;
     }
 
-    /* 다크 모드 버튼 */
     .theme-toggle {
       position: fixed;
       top: 20px;
@@ -138,7 +132,6 @@
       transition: 0.3s;
     }
 
-    /* 미디어 쿼리: 화면이 넓어지면 좌/우 2단으로 변경 */
     @media (min-width: 600px) {
       .list-item {
         flex-direction: row;
@@ -194,7 +187,6 @@
     <section>
       <h2>Projects</h2>
 
-      <!-- 프로젝트 1. 현재 만들고 있는 웹 이력서 -->
       <div class="list-item">
         <div class="item-left-group">
           <div class="item-header">반응형 웹 포트폴리오 개발</div>
@@ -210,8 +202,6 @@
         </div>
       </div>
 
-      <!-- 프로젝트 2. Java 학습 내용을 바탕으로 한 예시 프로젝트 -->
-      <!-- 학교 과제나 개인 스터디로 진행한 Java 객체지향 프로젝트로 내용을 바꿔보세요 -->
       <div class="list-item">
         <div class="item-left-group">
           <div class="item-header">Java 기반 학생 관리 시스템 (예시)</div>
@@ -227,7 +217,6 @@
         </div>
       </div>
 
-      <!-- 프로젝트 3. 프론트엔드 역량을 보여주기 좋은 예시 프로젝트 -->
       <div class="list-item">
         <div class="item-left-group">
           <div class="item-header">인터랙티브 웹 To-Do 리스트 (예시)</div>
