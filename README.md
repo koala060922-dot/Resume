@@ -6,7 +6,7 @@
 <br>
 
 ## 🚀 라이브 데모
-🔗 [GitHub Pages로 배포된 페이지 확인하기](https://koala060922-dot.github.io/Resume)  
+🔗 [GitHub Pages로 배포된 페이지 확인하기](https://github.com/koala060922-dot/Resume)  
 
 <br>
 
